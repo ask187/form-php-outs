@@ -22,23 +22,27 @@ echo'
 	}
 	else{
 	echo '<table class="table table-bordered">
-    <tr><th>SNO</th><th>Name</th><th>Email</th><th>Age</th>
+    <tr><th>SNO</th><th>Name</th><th>Email</th><th>Age</th><th>View</th>
     </tr>';
 	if(mysql_num_rows($results)>0)
 {
    
 while ($row = mysql_fetch_array($results)) {
+   $s=$row['SNO'];
+   
     echo '
+    <form action="disp.php" method="POST">
         <tr>
             <td>'.$row['SNO'].'</td>
             <td>'.$row['name'].'</td>
             <td>'.$row['email'].'</td>
             <td>'.$row['age'].'</td>
+            <td><button value="'.$s.'" type="submit" name="btn" id="btn" >View</button></td>
         </tr>';
 
 }
 
-echo '
+echo '</form>
 </table>';
 
 
