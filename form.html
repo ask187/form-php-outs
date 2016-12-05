@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head><title>Form with Php</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body><div id="main">
+	
+	<form action="process.php" method="POST">
+	Name:<br>
+	<input type="text" name="name"id="name" required></input><br><br>
+	Email Id<br>
+	<input required type="email"  id="email"name="email"></input><br><br>
+	Age<br>
+	<input required type="text" id="age" name="age"></input><br><br><br>
+	<button  name="action" value="inpu" type="Submit">Submit</button><br><br>
+	</form>
+	<div >
+	<button type="submit" name="action" value="show" onclick="location.href = 'result.php'"">Show Table</button>
+	</form>
+	</div>
+</body>
